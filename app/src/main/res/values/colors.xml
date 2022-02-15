@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor1">#dd2c00</color>
+    <color name="primaryLightColor1">#ff6434</color>
+    <color name="primaryDarkColor1">#a30000</color>
+    <color name="secondaryColor1">#616161</color>
+    <color name="secondaryLightColor1">#8e8e8e</color>
+    <color name="secondaryDarkColor1">#373737</color>
+    <color name="primaryTextColor1">#ffffff</color>
+    <color name="secondaryTextColor1">#ffffff</color>
+
+    <color name="primaryColor4">#263238</color>
+    <color name="primaryLightColor4">#4f5b62</color>
+    <color name="primaryDarkColor4">#000a12</color>
+    <color name="secondaryColor4">#b71c1c</color>
+    <color name="secondaryLightColor4">#f05545</color>
+    <color name="secondaryDarkColor4">#7f0000</color>
+    <color name="primaryTextColor4">#ffffff</color>
+    <color name="secondaryTextColor4">#eceff1</color>
+
+    <color name="primaryColor5">#c5e1a5</color>
+    <color name="primaryLightColor5">#ffffff</color>
+    <color name="primaryDarkColor5">#babdbe</color>
+    <color name="secondaryColor5">#c5e1a5</color>
+    <color name="secondaryLightColor5">#f8ffd7</color>
+    <color name="secondaryDarkColor5">#94af76</color>
+    <color name="primaryTextColor5">#212121</color>
+    <color name="secondaryTextColor5">#263238</color>
+
+    <color name="primaryColor6">#bdbdbd</color>
+    <color name="primaryLightColor6">#efefef</color>
+    <color name="primaryDarkColor6">#8d8d8d</color>
+    <color name="secondaryColor6">#ffa726</color>
+    <color name="secondaryLightColor6">#ffd95b</color>
+    <color name="secondaryDarkColor6">#c77800</color>
+    <color name="primaryTextColor6">#212121</color>
+    <color name="secondaryTextColor6">#263238</color>
+
+
+
+    <color name="materialRed">#DD2C00</color>
+    <color name="materialGreen">#00C853</color>
+
+</resources>

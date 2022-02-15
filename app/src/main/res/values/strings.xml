@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Quick Calculation</string>
+    <string name="action_settings">Settings</string>
+    <string name="operators">Operators</string>
+    <string name="timer">Timer</string>
+    <string name="starts_now">Starts Now</string>
+    <string name="result">Result</string>
+    <string name="report_card">Report Card</string>
+    <string name="total_attempts">Total Attempts</string>
+    <string name="total_correct">Total Correct</string>
+    <string name="play_again">Play Again</string>
+    <string name="next">Next</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong</string>
+    <string name="done">Done!</string>
+    <string name="input_number_ranges">Input number ranges</string>
+    <string name="range_1">Range 1</string>
+    <string name="to">To</string>
+    <string name="range_2">Range 2</string>
+    <string name="number">number</string>
+    <string name="upper_value_must_be_greater">Must be greater then lower value</string>
+</resources>

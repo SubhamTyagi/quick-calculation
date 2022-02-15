@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.QuickCalculation" parent="Theme.Material3.DayNight">
+
+        <!--<item name="colorPrimary">@color/primaryColor5</item>
+        <item name="colorOnPrimary">@color/primaryTextColor5</item>
+        <item name="colorSecondary">@color/secondaryColor5</item>
+        <item name="colorSecondaryVariant">@color/secondaryTextColor5</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor5</item>-->
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="timer" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/materialRed</item>
+    </style>
+
+    <style name="score" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/materialGreen</item>
+    </style>
+
+    <style name="question" parent="Widget.MaterialComponents.TextView">
+       <!-- <item name="android:background"></item>-->
+    </style>
+
+    <style name="answerButton" parent="ThemeOverlay.Material3.Button">
+
+    </style>
+
+    <style name="boldBig" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif-smallcaps</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

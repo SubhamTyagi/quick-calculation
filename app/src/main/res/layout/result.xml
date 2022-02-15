@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alwaysDrawnWithCache="true"
+    android:background="@android:color/white"
+    tools:visibility="visible">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_report_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="10dp"
+        android:text="@string/report_card"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total_attempt"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/total_attempts"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_report_card" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total_attempt_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="25"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_total_attempt"
+        app:layout_constraintTop_toBottomOf="@+id/tv_report_card"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total_correct"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/total_correct"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_total_correct_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:padding="5dp"
+        android:text="25"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_total_correct"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_play_again"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:text="@string/play_again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_correct"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+    
