@@ -1,0 +1,7 @@
+Improve you calculation speed with this app
+
+## Features
+
+ - 4 Operators (i.e. Sum, Multiplication, Subtractions, Simplification)
+ -  Range for numbers
+ 
