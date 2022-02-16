@@ -85,7 +85,7 @@ public class QuizActivity extends AppCompatActivity {
         Intent get = getIntent();
         operation = get.getStringExtra(Constants.OPERATIONS);
         if (operation.equals("simplification")) {
-            mQuestionTextView.setTextSize(20);
+            mQuestionTextView.setTextSize(22);
         }
         timer = get.getStringExtra(Constants.TIME);
         mLowerRange1 = get.getIntExtra(Constants.LOWER_1, 11);
