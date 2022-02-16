@@ -2,7 +2,6 @@ package io.github.subhamtyagi.quickcalculation;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -141,7 +140,7 @@ public class QuizActivity extends AppCompatActivity {
                 mResultTextView.setText(getString(R.string.done));
                 mReportCardView.setVisibility(View.VISIBLE);
                 mReportCardView.setY(2000);
-                mReportCardView.animate().translationYBy(-1990).setDuration(2000);
+                mReportCardView.animate().translationYBy(-1990).setDuration(1350);
                 mTotalAttemptTextView.setText(Integer.toString(mTotalQuestionCount));
                 mTotalCorrectTextView.setText(Integer.toString(mCorrectCount));
                 mPlayAgainButton.setVisibility(View.VISIBLE);
@@ -171,7 +170,7 @@ public class QuizActivity extends AppCompatActivity {
         mScoreTextView.setText(mCorrectCount + "/" + mTotalQuestionCount);
     }
 
-    /**
+    /*
      *
      * BottomSheetResultsFragment bottomSheetResultsFragment = BottomSheetResultsFragment.newInstance(text);
      *  bottomSheetResultsFragment.show(getSupportFragmentManager(), "bottomSheetResultsFragment");

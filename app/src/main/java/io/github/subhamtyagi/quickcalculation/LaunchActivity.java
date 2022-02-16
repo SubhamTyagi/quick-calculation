@@ -120,7 +120,7 @@ public class LaunchActivity extends AppCompatActivity {
                         i.putExtra(Constants.UPPER_2, iU2);
                         i.putExtra(Constants.UPPER_1, iU1);
                         startActivity(i);
-                        overridePendingTransition(android.R.anim.cycle_interpolator, android.R.anim.fade_out);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     } else{
                         upper1.requestFocus();
                         Toast.makeText(this, getResources().getString(R.string.upper_value_must_be_greater), Toast.LENGTH_SHORT).show();
