@@ -19,4 +19,5 @@
     <string name="range_2">Range 2</string>
     <string name="number">number</string>
     <string name="upper_value_must_be_greater">Must be greater then lower value</string>
+    <string name="submit">Submit</string>
 </resources>

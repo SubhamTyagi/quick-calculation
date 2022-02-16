@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-smallcaps"
         android:padding="10dp"
         android:text="30s"
@@ -33,7 +33,7 @@
         style="@style/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:fontFamily="sans-serif-smallcaps"
@@ -54,12 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="50 + 9"
-        android:textSize="34sp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,9 +84,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
-            android:layout_width="141dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="15dp"
             android:text="59"
@@ -101,9 +101,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="15dp"
             android:text="49"
@@ -118,9 +118,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
-            android:layout_width="141dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="15dp"
             android:text="41"
@@ -135,9 +135,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
-            android:layout_width="141dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:fontFamily="sans-serif-smallcaps"
             android:padding="15dp"
             android:text="69"
@@ -157,7 +157,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:fontFamily="sans-serif-smallcaps"
@@ -168,14 +168,23 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/options"
-        tools:visibility="visible" />
+        app:layout_constraintTop_toBottomOf="@id/options" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/submit"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:id="@+id/results"
-        android:visibility="invisible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
@@ -204,37 +213,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_total_attempt"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="@string/total_attempts"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_report_card" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_total_attempt_result"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="50dp"
-            android:padding="5dp"
-            android:text="25"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/tv_total_attempt"
-            app:layout_constraintTop_toBottomOf="@+id/tv_report_card"
-            tools:ignore="HardcodedText" />
-
-        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_total_correct"
             android:layout_width="160dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="50dp"
@@ -243,11 +224,11 @@
             android:text="@string/total_correct"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_report_card" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_total_correct_result"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
             android:layout_marginLeft="80dp"
@@ -256,10 +237,38 @@
             android:text="25"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/tv_total_correct"
-            app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt"
+            app:layout_constraintTop_toBottomOf="@+id/tv_report_card"
             tools:ignore="HardcodedText" />
 
-        <Button
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_attempt"
+            android:layout_width="160dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/total_attempts"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_correct" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_attempt_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:padding="5dp"
+            android:text="25"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_total_attempt"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_correct"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_play_again"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -272,7 +281,7 @@
             android:text="@string/play_again"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_total_correct"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt"
             tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

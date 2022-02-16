@@ -32,7 +32,9 @@ public class QuizActivity extends AppCompatActivity {
     private TextView mResultTextView;
     private TextView mTotalAttemptTextView;
     private TextView mTotalCorrectTextView;
+
     private Vibrator vibrator;
+    private CountDownTimer countDownTimer;
 
     private int mCorrectCount = 0;
     private int mTotalQuestionCount = 0;
@@ -65,12 +67,16 @@ public class QuizActivity extends AppCompatActivity {
         mTotalAttemptTextView = findViewById(R.id.tv_total_attempt_result);
         mTotalCorrectTextView = findViewById(R.id.tv_total_correct_result);
 
-        vibrator= (Vibrator) getSystemService(VIBRATOR_SERVICE);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         mOption1Button.setOnClickListener(this::checkForAnswer);
         mOption2Button.setOnClickListener(this::checkForAnswer);
         mOption3Button.setOnClickListener(this::checkForAnswer);
         mOption4Button.setOnClickListener(this::checkForAnswer);
+        findViewById(R.id.btn_submit).setOnClickListener(view -> {
+            countDownTimer.onFinish();
+            countDownTimer.cancel();
+        });
 
         mPlayAgainButton.setOnClickListener(this::play);
 
@@ -127,7 +133,7 @@ public class QuizActivity extends AppCompatActivity {
 
     public void startTimer() {
         int t = Integer.parseInt(timer) * 1000 + 100;
-        new CountDownTimer(t, 1000) {
+        countDownTimer = new CountDownTimer(t, 1000) {
             @Override
             public void onTick(long l) {
                 String time = (int) l / 1000 + "s";
@@ -160,8 +166,8 @@ public class QuizActivity extends AppCompatActivity {
             mResultTextView.setTextColor(getResources().getColor(R.color.materialRed));
             //vibrate phone
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                vibrator.vibrate(VibrationEffect.createOneShot(100,VibrationEffect.DEFAULT_AMPLITUDE));
-            }else{
+                vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
                 vibrator.vibrate(100);
             }
         }
