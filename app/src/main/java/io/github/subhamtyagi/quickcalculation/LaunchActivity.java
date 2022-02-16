@@ -109,19 +109,19 @@ public class LaunchActivity extends AppCompatActivity {
             } else if (u2 == null) {
                 upper2.requestFocus();
             } else {
-                int iL1=Integer.parseInt(l1);
-                int iL2=Integer.parseInt(l2);
-                int iU1=Integer.parseInt(u1);
-                int iU2=Integer.parseInt(u2);
-                if (iU2 > iL2) {
-                    if (iU1 > iL1) {
+                int iL1 = Integer.parseInt(l1);
+                int iL2 = Integer.parseInt(l2);
+                int iU1 = Integer.parseInt(u1);
+                int iU2 = Integer.parseInt(u2);
+                if (iU2 >= iL2) {
+                    if (iU1 >= iL1) {
                         i.putExtra(Constants.LOWER_1, iL1);
                         i.putExtra(Constants.LOWER_2, iL2);
                         i.putExtra(Constants.UPPER_2, iU2);
                         i.putExtra(Constants.UPPER_1, iU1);
                         startActivity(i);
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                    } else{
+                    } else {
                         upper1.requestFocus();
                         Toast.makeText(this, getResources().getString(R.string.upper_value_must_be_greater), Toast.LENGTH_SHORT).show();
                     }
