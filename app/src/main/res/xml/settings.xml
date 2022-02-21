@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- <androidx.preference.PreferenceCategory android:title="Theme">
+         <ListPreference
+             android:defaultValue="default_"
+             android:entries="@array/theme_name"
+             android:entryValues="@array/theme_value"
+             android:key="@string/pf_theme"
+             android:summary="Theme Name"
+             android:title="@string/select_theme" />
+     </androidx.preference.PreferenceCategory>-->
+
+    <androidx.preference.PreferenceCategory
+        android:minHeight="48dp"
+        android:title="Notification">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="@string/pf_notification_switch"
+            android:summaryOff="off"
+            android:summaryOn="on"
+            android:title="@string/notification" />
+        <Preference
+            android:key="@string/pf_notification_time"
+            android:summary="time"
+            android:title="@string/notification_time"
+            app:dependency="@string/pf_notification_switch" />
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

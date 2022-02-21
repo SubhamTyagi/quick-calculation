@@ -17,7 +17,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
-        android:fontFamily="sans-serif-smallcaps"
+
         android:padding="10dp"
         android:text="30s"
         android:textAllCaps="false"
@@ -36,7 +36,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+
         android:padding="10dp"
         android:text="0/0"
         android:textAllCaps="false"
@@ -49,7 +49,6 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/question"
-        style="@style/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -57,7 +56,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+
         android:text="50 + 9"
         android:textSize="38sp"
         android:textStyle="bold"
@@ -87,7 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="sans-serif-smallcaps"
+
             android:padding="15dp"
             android:text="59"
             android:textSize="36sp"
@@ -104,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="sans-serif-smallcaps"
+
             android:padding="15dp"
             android:text="49"
             android:textSize="36sp"
@@ -121,7 +120,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="sans-serif-smallcaps"
+
             android:padding="15dp"
             android:text="41"
             android:textSize="36sp"
@@ -138,7 +137,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="sans-serif-smallcaps"
+
             android:padding="15dp"
             android:text="69"
             android:textSize="36sp"
@@ -160,7 +159,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+
         android:text="@string/result"
         android:textAllCaps="true"
         android:textColor="@android:color/background_dark"
@@ -188,12 +187,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:id="@+id/results"
-        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:alwaysDrawnWithCache="true"
-        android:background="@android:color/white"
+        android:background="?attr/resultBackground"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

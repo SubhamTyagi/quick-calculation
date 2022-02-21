@@ -16,7 +16,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import io.github.subhamtyagi.quickcalculation.factory.GenerateQuestion;
 import io.github.subhamtyagi.quickcalculation.factory.Question;
-import io.github.subhamtyagi.quickcalculation.utils.Constants;
+import io.github.subhamtyagi.quickcalculation.utils.Utils;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -83,15 +83,15 @@ public class QuizActivity extends AppCompatActivity {
         mReportCardView.setVisibility(View.INVISIBLE);
 
         Intent get = getIntent();
-        operation = get.getStringExtra(Constants.OPERATIONS);
+        operation = get.getStringExtra(Utils.OPERATIONS);
         if (operation.equals("simplification")) {
             mQuestionTextView.setTextSize(22);
         }
-        timer = get.getStringExtra(Constants.TIME);
-        mLowerRange1 = get.getIntExtra(Constants.LOWER_1, 11);
-        mLowerRange2 = get.getIntExtra(Constants.LOWER_2, 11);
-        mUpperRange2 = get.getIntExtra(Constants.UPPER_2, 99);
-        mUpperRange1 = get.getIntExtra(Constants.UPPER_1, 99);
+        timer = get.getStringExtra(Utils.TIME);
+        mLowerRange1 = get.getIntExtra(Utils.LOWER_1, 11);
+        mLowerRange2 = get.getIntExtra(Utils.LOWER_2, 11);
+        mUpperRange2 = get.getIntExtra(Utils.UPPER_2, 99);
+        mUpperRange1 = get.getIntExtra(Utils.UPPER_1, 99);
 
         play(mPlayAgainButton);
     }

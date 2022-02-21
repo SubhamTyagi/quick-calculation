@@ -14,4 +14,24 @@
         <item>90</item>
         <item>120</item>
     </string-array>
+
+    <!-- <string-array name="theme_name">
+         <item>Default</item>
+         <item>Purple</item>
+         <item>Red</item>
+         <item>Dark Blue</item>
+         <item>Light Green</item>
+         <item>Dark</item>
+
+     </string-array>
+     <string-array name="theme_value">
+         <item>quick_calculation</item>
+         <item>purple</item>
+         <item>red</item>
+         <item>dark_blue</item>
+         <item>light_green</item>
+         <item>dark</item>
+
+     </string-array>-->
+
 </resources>

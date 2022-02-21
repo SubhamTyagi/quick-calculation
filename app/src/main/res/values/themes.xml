@@ -1,14 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
-    <style name="Theme.QuickCalculation" parent="Theme.Material3.DayNight">
 
-        <!--<item name="colorPrimary">@color/primaryColor5</item>
-        <item name="colorOnPrimary">@color/primaryTextColor5</item>
-        <item name="colorSecondary">@color/secondaryColor5</item>
-        <item name="colorSecondaryVariant">@color/secondaryTextColor5</item>
-        <item name="colorOnSecondary">@color/secondaryTextColor5</item>-->
+    <style name="Theme.quick_calculation" parent="Theme.Material3.DayNight">
         <item name="android:textStyle">bold</item>
-
+        <item name="fontFamily">sans-serif-smallcaps</item>
+        <item name="resultBackground">@color/background</item>
     </style>
 
     <style name="timer" parent="Widget.MaterialComponents.TextView">
@@ -19,18 +15,123 @@
         <item name="android:textColor">@color/materialGreen</item>
     </style>
 
-    <style name="question" parent="Widget.MaterialComponents.TextView">
-       <!-- <item name="android:background"></item>-->
-    </style>
+    <!-- <style name="Theme.purple" parent="Theme.Default">
 
-    <style name="answerButton" parent="ThemeOverlay.Material3.Button">
+         <item name="colorPrimary">@color/primaryColor</item>
+         <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+         <item name="colorOnPrimary">@color/primaryTextColor</item>
 
-    </style>
+         <item name="colorSecondary">@color/secondaryColor</item>
+         <item name="colorSecondaryVariant">@color/secondaryLightColor</item>
+         <item name="colorOnSecondary">@color/secondaryTextColor</item>
 
-    <style name="boldBig" parent="Widget.MaterialComponents.TextView">
-        <item name="fontFamily">sans-serif-smallcaps</item>
-        <item name="android:textStyle">bold</item>
-    </style>
+         <item name="android:colorBackground">@color/background</item>
+         <item name="colorBackgroundFloating">@color/background</item>
+         <item name="resultBackground">@color/background</item>
+
+         <item name="colorSurface">@color/ui_bg_surface</item>
+         <item name="colorPrimarySurface">@color/ui_bg_toolbar</item>
+
+         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+         </item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">
+             @android:color/transparent
+         </item>
+     </style>
+
+     <style name="Theme.red" parent="Theme.Default">
+         <item name="colorPrimary">@color/primaryColor1</item>
+         <item name="colorPrimaryVariant">@color/primaryLightColor1</item>
+         <item name="colorOnPrimary">@color/primaryTextColor1</item>
+
+         <item name="colorSecondary">@color/secondaryColor1</item>
+         <item name="colorSecondaryVariant">@color/secondaryLightColor1</item>
+         <item name="colorOnSecondary">@color/secondaryTextColor1</item>
+
+         <item name="android:colorBackground">@color/background</item>
+         <item name="colorBackgroundFloating">@color/background</item>
+         <item name="resultBackground">@color/background</item>
+
+         <item name="colorSurface">@color/ui_bg_surface</item>
+         <item name="colorPrimarySurface">@color/ui_bg_toolbar</item>
+
+         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+         </item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">
+             @android:color/transparent
+         </item>
+     </style>
+
+     <style name="Theme.dark.blue" parent="Theme.Default">
+         <item name="colorPrimary">@color/primaryColor2</item>
+         <item name="colorPrimaryVariant">@color/primaryLightColor2</item>
+         <item name="colorOnPrimary">@color/primaryTextColor2</item>
+
+         <item name="colorSecondary">@color/secondaryColor2</item>
+         <item name="colorSecondaryVariant">@color/secondaryLightColor2</item>
+         <item name="colorOnSecondary">@color/secondaryTextColor2</item>
+
+         <item name="android:colorBackground">@color/background</item>
+         <item name="colorBackgroundFloating">@color/background</item>
+         <item name="resultBackground">@color/background</item>
+
+         <item name="colorSurface">@color/ui_bg_surface</item>
+         <item name="colorPrimarySurface">@color/ui_bg_toolbar</item>
+
+         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+         </item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">
+             @android:color/transparent
+         </item>
+     </style>
+
+     <style name="Theme.light.green" parent="Theme.Default">
+         <item name="colorPrimary">@color/primaryColor3</item>
+         <item name="colorPrimaryVariant">@color/primaryLightColor3</item>
+         <item name="colorOnPrimary">@color/primaryTextColor3</item>
+
+         <item name="colorSecondary">@color/secondaryColor3</item>
+         <item name="colorSecondaryVariant">@color/secondaryLightColor3</item>
+         <item name="colorOnSecondary">@color/secondaryTextColor3</item>
+
+         <item name="android:colorBackground">@color/background</item>
+         <item name="colorBackgroundFloating">@color/background</item>
+         <item name="resultBackground">@color/background</item>
+
+         <item name="colorSurface">@color/ui_bg_surface</item>
+         <item name="colorPrimarySurface">@color/ui_bg_toolbar</item>
+
+         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+         </item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">
+             @android:color/transparent
+         </item>
+     </style>
+
+     <style name="Theme.dark" parent="Theme.Default">
+         <item name="colorPrimary">@color/primaryColor4</item>
+         <item name="colorPrimaryVariant">@color/primaryLightColor4</item>
+         <item name="colorOnPrimary">@color/primaryTextColor4</item>
+
+         <item name="colorSecondary">@color/secondaryColor4</item>
+         <item name="colorSecondaryVariant">@color/secondaryLightColor4</item>
+         <item name="colorOnSecondary">@color/secondaryTextColor4</item>
+
+         <item name="android:colorBackground">@color/background4</item>
+         <item name="colorBackgroundFloating">@color/background4</item>
+         <item name="resultBackground">@color/background4</item>
+
+         <item name="colorSurface">@color/ui_bg_surface4</item>
+         <item name="colorPrimarySurface">@color/ui_bg_toolbar4</item>
+         <item name="android:textColor">@android:color/white</item>
+
+         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+         </item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">
+             @android:color/transparent
+         </item>
+     </style>
+     -->
 
 
 </resources>

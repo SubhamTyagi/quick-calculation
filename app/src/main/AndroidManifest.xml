@@ -3,27 +3,34 @@
     package="io.github.subhamtyagi.quickcalculation">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuickCalculation">
-        <activity android:name=".QuizActivity"
-            android:theme="@style/Theme.QuickCalculation"
-            android:exported="true"/>
+        android:theme="@style/Theme.quick_calculation">
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
         <activity
             android:name=".LaunchActivity"
-            android:label="@string/app_name"
             android:exported="true"
-            android:theme="@style/Theme.QuickCalculation">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".LaunchActivity$AlarmReceiver" />
     </application>
 
 </manifest>
