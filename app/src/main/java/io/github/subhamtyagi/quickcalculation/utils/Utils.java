@@ -8,6 +8,14 @@ public class Utils {
     public static final String UPPER_1 = "upper1";
     public static final String UPPER_2 = "upper2";
 
+    public static final String SUM="sum";
+    public static final String SUBSTRACT="subtract";
+    public static final String MULTIPLICATION="multiplication";
+    public static final String DIVISION="division";
+    public static final String SIMPLIFICATION="simplification";
+    public static final String SIMPLIFICATION_ADVANCE="simplification2";
+    public static final String MIX ="mix";
+
    /* public static int getTheme(Context context) {
         final String name = SpUtil.getInstance().getString(context.getString(R.string.pf_theme), "quick_calculation");
         switch (name) {

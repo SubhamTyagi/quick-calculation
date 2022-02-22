@@ -84,7 +84,8 @@ public class QuizActivity extends AppCompatActivity {
 
         Intent get = getIntent();
         operation = get.getStringExtra(Utils.OPERATIONS);
-        if (operation.equals("simplification")) {
+
+        if (operation.equals(Utils.SIMPLIFICATION)||operation.equals(Utils.SIMPLIFICATION_ADVANCE)||operation.equals(Utils.MIX)) {
             mQuestionTextView.setTextSize(22);
         }
         timer = get.getStringExtra(Utils.TIME);
@@ -111,17 +112,28 @@ public class QuizActivity extends AppCompatActivity {
 
     private void showNewQuestion() {
         switch (operation) {
-            case "sum":
+            case Utils.SUM:
                 question = GenerateQuestion.addition(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
                 break;
-            case "subtract":
+            case Utils.SUBSTRACT:
                 question = GenerateQuestion.subtract(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
                 break;
-            case "multiply":
+            case Utils.MULTIPLICATION:
                 question = GenerateQuestion.multiplication(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
                 break;
+            case Utils.DIVISION:
+                question = GenerateQuestion.division(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+                break;
+            case Utils.SIMPLIFICATION:
+                question = GenerateQuestion.simplification(mLowerRange1, mUpperRange1);
+                break;
+            case Utils.SIMPLIFICATION_ADVANCE:
+                question = GenerateQuestion.simplificationAdvance(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+                break;
             default:
-                question = GenerateQuestion.addSubs(mLowerRange1, mUpperRange1);
+                question = GenerateQuestion.mix(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+
+
         }
         //set options
         mQuestionTextView.setText(question.getQuestion());

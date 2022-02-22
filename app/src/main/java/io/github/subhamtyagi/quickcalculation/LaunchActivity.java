@@ -31,7 +31,7 @@ public class LaunchActivity extends AppCompatActivity {
     AlarmManager manager;
     PendingIntent pendingIntent;
     private Spinner operationsSpinner, timerSpinner;
-    private String operationName = "multiply", timer = "30";
+    private String operationName = "mix", timer = "30";
     private EditText lower1, lower2, upper1, upper2;
 
     @Override
@@ -51,21 +51,31 @@ public class LaunchActivity extends AppCompatActivity {
         upper2 = findViewById(R.id.et_range2_upper);
 
         setAdapters();
+
         operationsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 switch (position) {
                     case 0:
-                        operationName = "sum";
+                        operationName = Utils.SUM;
                         break;
                     case 1:
-                        operationName = "subtract";
+                        operationName = Utils.SUBSTRACT;
                         break;
                     case 2:
-                        operationName = "multiply";
+                        operationName = Utils.MULTIPLICATION;
+                        break;
+                    case 3:
+                        operationName=Utils.DIVISION;
+                        break;
+                    case 4:
+                        operationName = Utils.SIMPLIFICATION;
+                        break;
+                    case 5:
+                        operationName = Utils.SIMPLIFICATION_ADVANCE;
                         break;
                     default:
-                        operationName = "simplification";
+                        operationName = Utils.MIX;
 
                 }
             }
@@ -75,6 +85,7 @@ public class LaunchActivity extends AppCompatActivity {
 
             }
         });
+
         timerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
@@ -93,6 +104,12 @@ public class LaunchActivity extends AppCompatActivity {
                         break;
                     case 4:
                         timer = "120";
+                        break;
+                    case 5:
+                        timer = "300";
+                        break;
+                    case 6:
+                        timer= "600";
                         break;
 
                 }
@@ -177,9 +194,9 @@ public class LaunchActivity extends AppCompatActivity {
 
     public void setAdapters() {
         ArrayAdapter<CharSequence> opAdapter;
-        opAdapter = ArrayAdapter.createFromResource(this, R.array.Operations, android.R.layout.simple_spinner_item);
+        opAdapter = ArrayAdapter.createFromResource(this, R.array.operations, android.R.layout.simple_spinner_item);
         opAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ArrayAdapter<CharSequence> timerAdapter = ArrayAdapter.createFromResource(this, R.array.Timer, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> timerAdapter = ArrayAdapter.createFromResource(this, R.array.timer, android.R.layout.simple_spinner_item);
         timerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         operationsSpinner.setAdapter(opAdapter);
         timerSpinner.setAdapter(timerAdapter);
