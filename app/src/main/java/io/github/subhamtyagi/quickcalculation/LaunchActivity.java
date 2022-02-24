@@ -37,7 +37,8 @@ public class LaunchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        new CrashUtils(getApplicationContext(), "");
+        if (BuildConfig.DEBUG)
+            new CrashUtils(getApplicationContext(), "");
         SpUtil.getInstance().init(this);
         /*setTheme(Utils.getTheme(this));*/
 
