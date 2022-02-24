@@ -39,7 +39,7 @@ public class GenerateQuestion {
             divisor = Math.min(a, b);
         } while (divisor == 0);
         int answer = dividend / divisor;
-        return new Question(dividend + "/" + divisor, answer);
+        return new Question(dividend + "÷" + divisor, answer);
     }
 
     public static Question mix(int mLowerRange1, int mUpperRange1, int mLowerRange2, int mUpperRange2) {
@@ -116,7 +116,7 @@ public class GenerateQuestion {
             ops = random1.nextInt(4);
             switch (ops) {
                 case 2:
-                    node = generateTreeNode(number1, number2, number3, "*");
+                    node = generateTreeNode(number1, number2, number3, "x");
                     break;
                 case 3: {
                     while (number1 == 0)
@@ -155,20 +155,20 @@ public class GenerateQuestion {
         Random ra = new Random();
         int depth = ra.nextInt(8);
         switch (operator) {
-            case "*": {
+            case "x": {
                 if (depth < 5) {
-                    return new Node(n1 + "*" + n2 + "*" + n3, n1 * n2 * n3);
+                    return new Node(n1 + "x" + n2 + "x" + n3, n1 * n2 * n3);
                 } else
-                    return new Node(n1 + "*" + n2, n1 * n2);
+                    return new Node(n1 + "x" + n2, n1 * n2);
             }
             case "/": {
                 if (depth < 3) {
                     int temp = n1 * n3;
-                    return new Node(temp + "/" + n2 + "/" + n3, n1 / n2);
+                    return new Node(temp + "÷" + n2 + "÷" + n3, n1 / n2);
                 } else if (depth < 5) {
-                    return new Node(n1 + "/" + n2 + "*" + n3, n1 * n3 / n2);
+                    return new Node(n1 + "÷" + n2 + "x" + n3, n1 * n3 / n2);
                 }
-                return new Node(n1 + "/" + n2, n1 / n2);
+                return new Node(n1 + "÷" + n2, n1 / n2);
             }
             default:
                 return new Node(n1 + "", n1);// never happen
