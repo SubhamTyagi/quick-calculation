@@ -37,8 +37,8 @@ public class LaunchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (BuildConfig.DEBUG)
-            new CrashUtils(getApplicationContext(), "");
+
+        new CrashUtils(getApplicationContext(), "");
         SpUtil.getInstance().init(this);
         /*setTheme(Utils.getTheme(this));*/
 
@@ -50,6 +50,11 @@ public class LaunchActivity extends AppCompatActivity {
         lower2 = findViewById(R.id.et_range2_lower);
         upper1 = findViewById(R.id.et_range1_upper);
         upper2 = findViewById(R.id.et_range2_upper);
+
+        lower1.setText(SpUtil.getInstance().getString(Utils.LOWER_1, "11"));
+        lower2.setText(SpUtil.getInstance().getString(Utils.LOWER_2, "11"));
+        upper1.setText(SpUtil.getInstance().getString(Utils.UPPER_1, "99"));
+        upper2.setText(SpUtil.getInstance().getString(Utils.UPPER_2, "99"));
 
         setAdapters();
 
@@ -67,12 +72,15 @@ public class LaunchActivity extends AppCompatActivity {
                         operationName = Utils.MULTIPLICATION;
                         break;
                     case 3:
-                        operationName=Utils.DIVISION;
+                        operationName = Utils.DIVISION;
                         break;
                     case 4:
-                        operationName = Utils.SIMPLIFICATION;
+                        operationName = Utils.SUM_SERIES;
                         break;
                     case 5:
+                        operationName = Utils.SIMPLIFICATION;
+                        break;
+                    case 6:
                         operationName = Utils.SIMPLIFICATION_ADVANCE;
                         break;
                     default:
@@ -110,7 +118,7 @@ public class LaunchActivity extends AppCompatActivity {
                         timer = "300";
                         break;
                     case 6:
-                        timer= "600";
+                        timer = "600";
                         break;
 
                 }
@@ -150,6 +158,10 @@ public class LaunchActivity extends AppCompatActivity {
                         i.putExtra(Utils.LOWER_2, iL2);
                         i.putExtra(Utils.UPPER_2, iU2);
                         i.putExtra(Utils.UPPER_1, iU1);
+                        SpUtil.getInstance().putString(Utils.LOWER_1, String.valueOf(iL1));
+                        SpUtil.getInstance().putString(Utils.LOWER_2, String.valueOf(iL2));
+                        SpUtil.getInstance().putString(Utils.UPPER_1, String.valueOf(iU1));
+                        SpUtil.getInstance().putString(Utils.UPPER_2, String.valueOf(iU2));
                         startActivity(i);
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     } else {

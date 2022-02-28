@@ -85,7 +85,7 @@ public class QuizActivity extends AppCompatActivity {
         Intent get = getIntent();
         operation = get.getStringExtra(Utils.OPERATIONS);
 
-        if (operation.equals(Utils.SIMPLIFICATION)||operation.equals(Utils.SIMPLIFICATION_ADVANCE)||operation.equals(Utils.MIX)) {
+        if (operation.equals(Utils.SIMPLIFICATION) || operation.equals(Utils.SIMPLIFICATION_ADVANCE) || operation.equals(Utils.MIX) || operation.equals(Utils.SUM_SERIES)) {
             mQuestionTextView.setTextSize(22);
         }
         timer = get.getStringExtra(Utils.TIME);
@@ -123,6 +123,9 @@ public class QuizActivity extends AppCompatActivity {
                 break;
             case Utils.DIVISION:
                 question = GenerateQuestion.division(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+                break;
+            case Utils.SUM_SERIES:
+                question = GenerateQuestion.sumSeries(mLowerRange1, mUpperRange1);
                 break;
             case Utils.SIMPLIFICATION:
                 question = GenerateQuestion.simplification(mLowerRange1, mUpperRange1);

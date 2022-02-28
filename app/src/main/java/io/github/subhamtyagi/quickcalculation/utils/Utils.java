@@ -11,8 +11,9 @@ public class Utils {
     public static final String SUM="sum";
     public static final String SUBSTRACT="subtract";
     public static final String MULTIPLICATION="multiplication";
-    public static final String DIVISION="division";
-    public static final String SIMPLIFICATION="simplification";
+    public static final String DIVISION = "division";
+    public static final String SUM_SERIES = "sum_series";
+    public static final String SIMPLIFICATION = "simplification";
     public static final String SIMPLIFICATION_ADVANCE="simplification2";
     public static final String MIX ="mix";
 

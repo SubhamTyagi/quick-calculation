@@ -44,7 +44,7 @@ public class GenerateQuestion {
 
     public static Question mix(int mLowerRange1, int mUpperRange1, int mLowerRange2, int mUpperRange2) {
         Random rand = new Random();
-        int a = rand.nextInt(6);
+        int a = rand.nextInt(7);
         switch (a) {
             case 0:
                 return multiplication(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
@@ -56,10 +56,29 @@ public class GenerateQuestion {
                 return simplification(mLowerRange1, mUpperRange1);
             case 4:
                 return simplificationAdvance(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+            case 5:
+                return sumSeries(mLowerRange1, mUpperRange1);
             default:
                 return division(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
 
         }
+    }
+
+    public static Question sumSeries(int range_min, int range_max) {
+        Random rand = new Random();
+        int a = rand.nextInt(range_max - range_min + 1) + range_min;
+        int depth = 0;
+        while (depth == 0) depth = rand.nextInt(7);
+        int answer = a;
+        StringBuilder questionBuilder = new StringBuilder();
+        questionBuilder.append(a);
+        for (int i = 0; i < depth; i++) {
+            questionBuilder.append("+");
+            a = rand.nextInt(range_max - range_min + 1) + range_min;
+            questionBuilder.append(a);
+            answer += a;
+        }
+        return new Question(questionBuilder.toString(), answer);
     }
 
     public static Question simplification(int range_min, int range_max) {
