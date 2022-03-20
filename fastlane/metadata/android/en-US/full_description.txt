@@ -1,7 +1,12 @@
-Improve you calculation speed with this app
+Improve your maths calculation speed with this app.
 
 ## Features
 
- - 4 Operators (i.e. Sum, Multiplication, Subtractions, Simplification)
- -  Range for numbers
+ -  Addition, Multiplication, Subtractions, Division, Simplification, Simplification Advance, Miscellaneous.
+ -  Custom Range for numbers.
+ -  Timer (30s to 10 minutes).
+ -  Numbers are generated randomly in Custom Range provided by you.
+ -  
+
+
  
