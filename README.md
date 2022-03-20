@@ -17,9 +17,9 @@ Improve your mathematical calculation speed with this app
 ![Simplification](fastlane/metadata/android/en-US/images/phoneScreenshots/4.png?raw=true "simplification") | ![Correct](fastlane/metadata/android/en-US/images/phoneScreenshots/5.png?raw=true "correct") | ![Wrong](fastlane/metadata/android/en-US/images/phoneScreenshots/6.png?raw=true "wrong") | 
 
 ### App Icon License
-App icon is [created](https://github.com/SubhamTyagi/quick-calculation/pull/2) by [Onno van den Dungen](https://github.com/Donnnno)
-Copyright 2022 Onno van den Dungen
-Licensed under CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+- App icon is [created](https://github.com/SubhamTyagi/quick-calculation/pull/2) by [Onno van den Dungen](https://github.com/Donnnno)
+- Copyright 2022 Onno van den Dungen
+- Licensed under CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
 
 
 
