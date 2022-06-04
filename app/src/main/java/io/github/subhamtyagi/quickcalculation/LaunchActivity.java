@@ -184,7 +184,7 @@ public class LaunchActivity extends AppCompatActivity {
         if (pendingIntent != null && manager != null) {
             manager.cancel(pendingIntent);
         } else {
-            pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
+            pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
             manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         }
 
@@ -243,7 +243,7 @@ public class LaunchActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            setNotificationIfAny();
+          //  setNotificationIfAny();
         }
 
        /* if (SpUtil.getInstance().getBoolean(getString(R.string.is_theme_changed),false)){
