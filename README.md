@@ -16,6 +16,9 @@ Improve your mathematical calculation speed with this app
 | Quiz | Quiz | Quiz |
 ![Simplification](fastlane/metadata/android/en-US/images/phoneScreenshots/4.png?raw=true "simplification") | ![Correct](fastlane/metadata/android/en-US/images/phoneScreenshots/5.png?raw=true "correct") | ![Wrong](fastlane/metadata/android/en-US/images/phoneScreenshots/6.png?raw=true "wrong") | 
 
+
+#### Version 1.2
+
 ### App Icon License
 - App icon is [created](https://github.com/SubhamTyagi/quick-calculation/pull/2) by [Onno van den Dungen](https://github.com/Donnnno)
 - Copyright 2022 Onno van den Dungen
