@@ -2,11 +2,15 @@
 
 
     <style name="Theme.quick_calculation" parent="Theme.Material3.DayNight">
-        <item name="android:textStyle">bold</item>
-        <item name="fontFamily">sans-serif-smallcaps</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">sans-serif</item>
         <item name="resultBackground">@color/background</item>
     </style>
-
+    <style name="Theme.quick_calculation.header">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">sans-serif-black</item>
+        <item name="resultBackground">@color/background</item>
+    </style>
     <style name="timer" parent="Widget.MaterialComponents.TextView">
         <item name="android:textColor">@color/materialRed</item>
     </style>
