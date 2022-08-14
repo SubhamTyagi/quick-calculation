@@ -20,6 +20,7 @@
         android:layout_marginRight="5dp"
         android:padding="10dp"
         android:text="@string/report_card"
+        android:textAppearance="@style/Theme.quick_calculation.header"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
