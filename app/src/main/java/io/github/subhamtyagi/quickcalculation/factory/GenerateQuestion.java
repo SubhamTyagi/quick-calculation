@@ -42,6 +42,13 @@ public class GenerateQuestion {
         return new Question(dividend + "÷" + divisor, answer);
     }
 
+    public static Question modulus(int range_min, int range_max, int range_min2, int range_max2) {
+        Random rand = new Random();
+        int a = rand.nextInt(range_max - range_min + 1) + range_min;
+        int b = rand.nextInt(range_max2 - range_min2 + 1) + range_min2;
+        return new Question(a + " % " + b, a % b);
+    }
+
     public static Question mix(int mLowerRange1, int mUpperRange1, int mLowerRange2, int mUpperRange2) {
         Random rand = new Random();
         int a = rand.nextInt(7);

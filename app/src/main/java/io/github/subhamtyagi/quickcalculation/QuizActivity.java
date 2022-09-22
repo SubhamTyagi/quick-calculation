@@ -124,6 +124,9 @@ public class QuizActivity extends AppCompatActivity {
             case Utils.DIVISION:
                 question = GenerateQuestion.division(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
                 break;
+            case Utils.MODULUS:
+                question = GenerateQuestion.modulus(mLowerRange1, mUpperRange1, mLowerRange2, mUpperRange2);
+                break;
             case Utils.SUM_SERIES:
                 question = GenerateQuestion.sumSeries(mLowerRange1, mUpperRange1);
                 break;
