@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
+import com.google.android.material.color.DynamicColors;
 
 import io.github.subhamtyagi.quickcalculation.dialog.TimeDialog;
 import io.github.subhamtyagi.quickcalculation.utils.SpUtil;
@@ -19,6 +20,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SpUtil.getInstance().init(this);
         /*  setTheme(Utils.getTheme(this));*/
+        DynamicColors.applyToActivityIfAvailable(this);
         setContentView(R.layout.settings_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager()

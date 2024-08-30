@@ -19,6 +19,8 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.color.DynamicColors;
+
 import java.util.Calendar;
 
 import io.github.subhamtyagi.quickcalculation.utils.CrashUtils;
@@ -41,7 +43,7 @@ public class LaunchActivity extends AppCompatActivity {
         new CrashUtils(getApplicationContext(), "");
         SpUtil.getInstance().init(this);
         /*setTheme(Utils.getTheme(this));*/
-
+       DynamicColors.applyToActivityIfAvailable(this);
         setContentView(R.layout.activity_launch);
 
         operationsSpinner = findViewById(R.id.spinner_operator);

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
+import com.google.android.material.color.DynamicColors;
 import io.github.subhamtyagi.quickcalculation.factory.GenerateQuestion;
 import io.github.subhamtyagi.quickcalculation.factory.Question;
 import io.github.subhamtyagi.quickcalculation.utils.Utils;
@@ -51,6 +51,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DynamicColors.applyToActivityIfAvailable(this);
         setContentView(R.layout.activity_quiz);
 
         mOption1Button = findViewById(R.id.button0);
