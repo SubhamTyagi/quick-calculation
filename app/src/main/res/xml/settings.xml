@@ -28,4 +28,31 @@
             android:title="@string/notification_time"
             app:dependency="@string/pf_notification_switch" />
     </androidx.preference.PreferenceCategory>
+    
+    <androidx.preference.PreferenceCategory
+        android:minHeight="48dp"
+        android:title="Vibration">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="@string/pf_vibration_switch"
+            android:summaryOff="off"
+            android:summaryOn="on"
+            android:title="Vibration" />   
+            	
+            </androidx.preference.PreferenceCategory>
+    
+    <PreferenceCategory
+        android:minHeight="48dp"
+        android:title="About">
+
+        <Preference
+            android:summary="Quick calculation is open source app. Click here to visit source code repository on GitHub "
+            android:title="Source Code">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/SubhamTyagi/quick-calculation" />
+        </Preference>
+    </PreferenceCategory>
+    
 </androidx.preference.PreferenceScreen>

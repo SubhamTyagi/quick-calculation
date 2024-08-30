@@ -17,6 +17,7 @@ import com.google.android.material.color.DynamicColors;
 import io.github.subhamtyagi.quickcalculation.factory.GenerateQuestion;
 import io.github.subhamtyagi.quickcalculation.factory.Question;
 import io.github.subhamtyagi.quickcalculation.utils.Utils;
+import io.github.subhamtyagi.quickcalculation.utils.SpUtil;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -47,12 +48,14 @@ public class QuizActivity extends AppCompatActivity {
     private String timer = null;
 
     private Question question;
+    boolean isVibrationEnable ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         DynamicColors.applyToActivityIfAvailable(this);
         setContentView(R.layout.activity_quiz);
+        SpUtil.getInstance().init(this);
 
         mOption1Button = findViewById(R.id.button0);
         mOption2Button = findViewById(R.id.button1);
@@ -69,7 +72,8 @@ public class QuizActivity extends AppCompatActivity {
         mTotalCorrectTextView = findViewById(R.id.tv_total_correct_result);
 
         vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-
+        isVibrationEnable = SpUtil.getInstance().getBoolean(getString(R.string.pf_vibration_switch), true);
+      
         mOption1Button.setOnClickListener(this::checkForAnswer);
         mOption2Button.setOnClickListener(this::checkForAnswer);
         mOption3Button.setOnClickListener(this::checkForAnswer);
@@ -181,11 +185,13 @@ public class QuizActivity extends AppCompatActivity {
             mResultTextView.setText(R.string.wrong);
             mResultTextView.setTextColor(getResources().getColor(R.color.materialRed));
             //vibrate phone
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if(isVibrationEnable){
+            	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
-            } else {
-                vibrator.vibrate(100);
-            }
+                } else {
+                	vibrator.vibrate(100);
+                	}
+                	}
         }
         showNewQuestion();
         mTotalQuestionCount++;

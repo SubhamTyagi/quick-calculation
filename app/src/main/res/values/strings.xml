@@ -3,6 +3,7 @@
     <string name="pf_theme" translatable="false">pf_theme</string>
     <string name="pf_notification_switch" translatable="false">pf_notification_switch</string>
     <string name="pf_notification_time" translatable="false">pf_notification_time</string>
+    <string name="pf_vibration_switch" translatable="false">pf_vibration</string>
     <string name="key_notification_hours" translatable="false">notification_hours</string>
     <string name="key_notification_minutes" translatable="false">notification_minutes</string>
     <string name="is_theme_changed" translatable="false">is_theme_changed</string>
