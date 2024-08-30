@@ -14,7 +14,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/operators"
-        android:textAppearance="@style/Theme.quick_calculation.header"
+        
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
         android:layout_marginRight="20dp"
 
         android:text="@string/timer"
-        android:textAppearance="@style/Theme.quick_calculation.header"
+        
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         android:layout_marginRight="20dp"
 
         android:text="@string/input_number_ranges"
-        android:textAppearance="@style/Theme.quick_calculation.header"
+        
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

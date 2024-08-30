@@ -58,7 +58,7 @@
         android:layout_marginRight="15dp"
 
         android:text="50 + 9"
-        android:textAppearance="@style/Theme.quick_calculation.header"
+        
         android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,8 +163,7 @@
 
         android:text="@string/result"
         android:textAllCaps="true"
-        android:textAppearance="@style/Theme.quick_calculation.header"
-        android:textColor="@android:color/background_dark"
+        
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
