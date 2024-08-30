@@ -1,0 +1,4 @@
+Some ui improvement 
+Dynamic color support 
+Fix day night theme issue 
+Added option to disable vibration 
