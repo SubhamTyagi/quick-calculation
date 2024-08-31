@@ -15,6 +15,7 @@ public class Utils {
     public static final String SUM_SERIES = "sum_series";
     public static final String SIMPLIFICATION = "simplification";
     public static final String SIMPLIFICATION_ADVANCE="simplification2";
+    public static final String MODULO = "modulo";
     public static final String MIX ="mix";
 
    /* public static int getTheme(Context context) {

@@ -85,6 +85,9 @@ public class LaunchActivity extends AppCompatActivity {
                     case 6:
                         operationName = Utils.SIMPLIFICATION_ADVANCE;
                         break;
+                    case 7:
+                        operationName = Utils.MODULO;
+                        break;
                     default:
                         operationName = Utils.MIX;
 
