@@ -18,6 +18,8 @@ import io.github.subhamtyagi.quickcalculation.factory.GenerateQuestion;
 import io.github.subhamtyagi.quickcalculation.factory.Question;
 import io.github.subhamtyagi.quickcalculation.utils.Utils;
 import io.github.subhamtyagi.quickcalculation.utils.SpUtil;
+import java.util.ArrayList;
+import android.content.Intent;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -49,6 +51,9 @@ public class QuizActivity extends AppCompatActivity {
 
     private Question question;
     boolean isVibrationEnable ;
+
+    private ArrayList<QuestionResult> questionResultsList = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +114,7 @@ public class QuizActivity extends AppCompatActivity {
         mScoreTextView.setText("0 / 0");
         mCorrectCount = 0;
         mTotalQuestionCount = 0;
+        questionResultsList.clear();
         showNewQuestion();
 
         mPlayAgainButton.setVisibility(View.INVISIBLE);
@@ -170,6 +176,9 @@ public class QuizActivity extends AppCompatActivity {
                 mTotalAttemptTextView.setText(Integer.toString(mTotalQuestionCount));
                 mTotalCorrectTextView.setText(Integer.toString(mCorrectCount));
                 mPlayAgainButton.setVisibility(View.VISIBLE);
+                Intent intent = new Intent(QuizActivity.this, ResultActivity.class);
+                intent.putExtra("QUESTION_RESULTS", questionResultsList);
+                startActivity(intent);
             }
         }.start();
     }
@@ -193,10 +202,17 @@ public class QuizActivity extends AppCompatActivity {
                 	}
                 	}
         }
+
+        QuestionResult result = new QuestionResult(mQuestionTextView.getText().toString(), String.valueOf(clickedAnswer), String.valueOf(question.getCorrectAnswer()));
+        
+        questionResultsList.add(result);
+        
         showNewQuestion();
         mTotalQuestionCount++;
         mScoreTextView.setText(mCorrectCount + "/" + mTotalQuestionCount);
     }
+}
+
 
     /*
      *
@@ -204,4 +220,3 @@ public class QuizActivity extends AppCompatActivity {
      *  bottomSheetResultsFragment.show(getSupportFragmentManager(), "bottomSheetResultsFragment");
      *
      */
-}
