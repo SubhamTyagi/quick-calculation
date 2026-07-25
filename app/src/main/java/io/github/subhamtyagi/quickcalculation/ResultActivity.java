@@ -28,8 +28,22 @@ public class ResultActivity extends AppCompatActivity {
                                                                                                                                     // Initialize Adapter and submit the data
                                                                                                                                                 QuestionReviewAdapter adapter = new QuestionReviewAdapter();
                                                                                                                                                             recyclerView.setAdapter(adapter);
-                                                                                                                                                                        adapter.submitList(resultsList);
+                                                                                                                                                            adapter.submitList(resultsList);
+                                                                                                                                                            android.widget.Button doneButton = findViewById(R.id.btnDone);
+                                                                                                                                                            if (doneButton != null) {
+                                                                                                                                                                  doneButton.setOnClickListener(new android.view.View.OnClickListener() {
+                                                                                                                                                                  @Override
+                                                                                                                                                            public void onClick(android.view.View v) {
+                                                                                                                                                                  android.content.Intent intent = new android.content.Intent(ResultActivity.this, LaunchActivity.class);
+                                                                                                                                                                  intent.addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                                                                                                                                  startActivity(intent);
+                                                                                                                                                                                                               
+
+                                                                                                                                                                  }
+                                                                                                                                                                  });
+                                                                                                                                                                  } 
+                                                                                                                                                            
                                                                                                                                                                                 }
-                                                                                                                                                                                    }
+                                                                                                                                                                                }
                                                                                                                                                                                     }
                                                                                                                                                                                     
