@@ -1,5 +1,4 @@
 <resources>
-
     <string name="pf_theme" translatable="false">pf_theme</string>
     <string name="pf_notification_switch" translatable="false">pf_notification_switch</string>
     <string name="pf_notification_time" translatable="false">pf_notification_time</string>
@@ -33,6 +32,8 @@
     <string name="select_theme">Select Theme</string>
     <string name="notification">Notification</string>
     <string name="notification_time">Notification Time</string>
-
-
+    
+    <string name="skip">Skip</string>
+    <string name="use_keyboard_input">Use Keyboard Input</string>
+    <string name="end_quiz">End Quiz</string>
 </resources>
