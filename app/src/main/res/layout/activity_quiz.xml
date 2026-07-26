@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alwaysDrawnWithCache="true"
-    tools:context=".QuizActivity"
-    tools:visibility="visible">
+    tools:context=".QuizActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/timer"
@@ -15,9 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
-
         android:padding="10dp"
         android:text="30s"
         android:textAllCaps="false"
@@ -25,8 +22,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        tools:visibility="visible" />
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/score"
@@ -35,8 +31,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-
         android:padding="10dp"
         android:text="0/0"
         android:textAllCaps="false"
@@ -44,50 +38,39 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        tools:visibility="visible" />
+        tools:ignore="HardcodedText" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-
         android:text="50 + 9"
-        
         android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText"
-        tools:visibility="visible" />
-
+        tools:ignore="HardcodedText" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/options"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-        tools:visibility="visible">
+        app:layout_constraintTop_toBottomOf="@+id/question">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button0"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-
             android:padding="15dp"
             android:text="59"
             android:textSize="36sp"
@@ -96,15 +79,13 @@
             app:layout_gravity="fill"
             app:layout_row="0"
             app:layout_rowWeight="1"
-            tools:ignore="HardcodedText"
-            tools:visibility="visible" />
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-
             android:padding="15dp"
             android:text="49"
             android:textSize="36sp"
@@ -113,15 +94,13 @@
             app:layout_gravity="fill"
             app:layout_row="0"
             app:layout_rowWeight="1"
-            tools:ignore="HardcodedText"
-            tools:visibility="visible" />
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-
             android:padding="15dp"
             android:text="41"
             android:textSize="36sp"
@@ -130,15 +109,13 @@
             app:layout_gravity="fill"
             app:layout_row="1"
             app:layout_rowWeight="1"
-            tools:ignore="HardcodedText"
-            tools:visibility="visible" />
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-
             android:padding="15dp"
             android:text="69"
             android:textSize="36sp"
@@ -147,46 +124,78 @@
             app:layout_gravity="fill"
             app:layout_row="1"
             app:layout_rowWeight="1"
-            tools:ignore="HardcodedText"
-            tools:visibility="visible" />
+            tools:ignore="HardcodedText" />
     </androidx.gridlayout.widget.GridLayout>
+
+    <EditText
+        android:id="@+id/et_answer_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        android:hint="Type answer"
+        android:inputType="numberSigned"
+        android:imeOptions="actionDone"
+        android:padding="15dp"
+        android:textSize="36sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/answer_area_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="options,et_answer_input" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-
         android:text="@string/result"
         android:textAllCaps="true"
-        
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/options" />
+        app:layout_constraintTop_toBottomOf="@id/answer_area_barrier" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_submit"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_marginBottom="20dp"
-        android:text="@string/submit"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="@string/skip"
+            android:textSize="26sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/end_quiz"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <!-- MERGED RESULTS SCREEN -->
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:id="@+id/results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -199,16 +208,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_report_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
             android:padding="10dp"
             android:text="@string/report_card"
             android:textSize="34sp"
@@ -221,8 +227,7 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="@string/total_correct"
@@ -232,11 +237,10 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_total_correct_result"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:padding="5dp"
             android:text="25"
             android:textSize="24sp"
@@ -247,10 +251,9 @@
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_total_attempt"
             android:layout_width="160dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:text="@string/total_attempts"
@@ -263,8 +266,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:padding="5dp"
             android:text="25"
             android:textSize="24sp"
@@ -272,23 +274,30 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_total_correct"
             tools:ignore="HardcodedText" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_results"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_play_again"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_play_again"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="100dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             android:padding="5dp"
             android:text="@string/play_again"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_total_attempt"
-            tools:visibility="visible" />
-
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

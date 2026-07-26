@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.quick_calculation">
+        
         <activity
             android:name=".SettingsActivity"
             android:exported="false"
@@ -18,24 +19,21 @@
 
         <activity
             android:name=".QuizActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+            
         <activity
             android:name=".LaunchActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <receiver android:name=".LaunchActivity$AlarmReceiver" />
-        <activity 
-            android:name=".ResultActivity"
-            android:exported="false"
-            android:label="Performance Review" />
 
     </application>
-
 </manifest>
